@@ -1,4 +1,4 @@
-package uy.edu.fing.mina.simulaciones.pricing;
+package uy.edu.fing.mina.simulaciones.pricing.Potencia;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,24 +25,13 @@ public class Acciones {
 	
 	private void  popular(){
 		ActionTf nuevo = new ActionTf();
-		nuevo.setName("increasePriceFast");
-		conjuntoAcciones.put(nuevo.getName(), nuevo);
-	
-		nuevo = new ActionTf();
-		nuevo.setName("increasePriceSlow");
+		nuevo.setName("decrease_power");
 		conjuntoAcciones.put(nuevo.getName(), nuevo);
 		
 		nuevo = new ActionTf();
-		nuevo.setName("decreasePriceSlow");
+		nuevo.setName("increase_power");
 		conjuntoAcciones.put(nuevo.getName(), nuevo);
-		nuevo = new ActionTf();
 		
-		nuevo.setName("decreasePriceFast");
-		conjuntoAcciones.put(nuevo.getName(), nuevo);
-		nuevo = new ActionTf();
-		
-		nuevo.setName("keepPrice");
-		conjuntoAcciones.put(nuevo.getName(), nuevo);
 	}
 	
 	public ActionTf getAccion(String nombre){

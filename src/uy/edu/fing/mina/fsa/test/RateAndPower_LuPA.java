@@ -228,13 +228,13 @@ public class RateAndPower_LuPA {
     
     //Utils.showDot(rateAndPower.toDot("before det"));
 
-    rateAndPower.setDeterministic(false);
+    rateAndPower.setDeterministic(true);
     rateAndPower.determinize();
     
-    //Utils.showDot(rateAndPower.toDot("after all"));
+   Utils.showDot(rateAndPower.toDot(""));
     
     try {
-  		LupaExporterRatePower.generateLupaFiles(rateAndPower, "src/fsm_template.lua", "fsm_rate_loss");
+  		LupaExporterRatePower.generateLupaFiles(rateAndPower, "src/fsm_template.lua", "fsm_rate_loss1");
   	} catch (UnsupportedTFFSTException e) {
   		// TODO Auto-generated catch block
   		e.printStackTrace();
